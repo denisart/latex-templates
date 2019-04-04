@@ -1,0 +1,91 @@
+% ====================================================
+% CONFIGURATION FILE FOR BUILD ALGORITHM DESCRIPTION
+%
+% AUTHOR:   Denis Artyushin, artyushinden@gmail.com
+% DATE:     04.04.2019
+% ====================================================
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+% ====================================================
+% Color for general blocks
+% ====================================================
+% Default color
+% \definecolor{algblockcolor}{HTML}{000000}
+% Custom color
+\definecolor{algblockcolor}{HTML}{000080}
+
+% ====================================================
+% Re-command for general blocks
+% ====================================================
+% Russia
+\floatname{algorithm}{Алгоритм}
+\algrenewcommand\algorithmicrequire{\color{algblockcolor}{\textbf{Вход:}}}
+\algrenewcommand\algorithmicensure{\color{algblockcolor}{\textbf{Выход:}}}
+\algrenewcommand\algorithmicif{\color{algblockcolor}{\textbf{если}}}
+\algrenewcommand\algorithmicthen{\color{algblockcolor}{\textbf{то}}}
+\algrenewcommand\algorithmicelse{\color{algblockcolor}{\textbf{иначе}}}
+\algrenewcommand\algorithmicelsif{\color{algblockcolor}{\textbf{иначе если}}}
+\algrenewcommand\algorithmicfor{\color{algblockcolor}{\textbf{для}}}
+\algrenewcommand\algorithmicforall{\color{algblockcolor}{\textbf{для всех}}}
+\algrenewcommand\algorithmicdo{}
+\algrenewcommand\algorithmicrepeat{\color{algblockcolor}{\textbf{повторять}}}
+\algrenewcommand\algorithmicuntil{\color{algblockcolor}{\textbf{пока}}}
+\algrenewcommand\algorithmicloop{\color{algblockcolor}{\textbf{цикл}}}
+% English
+% \algrenewcommand\algorithmicrequire{\textbf{Input:}}
+% \algrenewcommand\algorithmicensure{\textbf{Output:}}
+% \algrenewcommand\algorithmicif{\color{algblockcolor}{\textbf{If}}}
+% \algrenewcommand\algorithmicthen{\color{algblockcolor}{\textbf{then}}}
+% \algrenewcommand\algorithmicelse{\color{algblockcolor}{\textbf{else}}}
+% \algrenewcommand\algorithmicelsif{\color{algblockcolor}{\textbf{if else}}}
+% \algrenewcommand\algorithmicfor{\color{algblockcolor}{\textbf{for}}}
+% \algrenewcommand\algorithmicforall{\color{algblockcolor}{\textbf{for all}}}
+% \algrenewcommand\algorithmicdo{}
+% \algrenewcommand\algorithmicrepeat{\color{algblockcolor}{\textbf{repeat}}}
+% \algrenewcommand\algorithmicuntil{\color{algblockcolor}{\textbf{while}}}
+% \algrenewcommand\algorithmicloop{\color{algblockcolor}{\textbf{loop}}}
+
+% ====================================================
+% Custom macros to describe of algorithms
+% ====================================================
+
+% Macro to build input or output block.
+%
+% Parameters
+% ----------
+% #1 : The content of input or output.
+%
+% Returns
+% -------
+% \Algioitem : The input or output block.
+\newcommand{\Algioitem}[1]{\State \hspace{2.5pt} #1}
+
+% Macro to describe the algorithm
+%
+% Parameters
+% ----------
+% #1 : The caption of the algorithm.
+% #2 : The label of the algorithm. Must be format `alg:myAlgLabel`
+% #3 : The input.
+% #4 : The output.
+% #5 : The description of algorithm.
+%
+% Returns
+% -------
+% \Alg : The algorithm structure with input and output.
+\newcommand{\Alg}[5]{
+\begin{algorithm}
+    \caption{#1}\label{#2}
+    \begin{algorithmic}
+        \Require
+            #3
+        \Ensure
+            \hspace{2.5pt} #4
+    \end{algorithmic}
+    \noindent\rule{\textwidth}{0.6pt}
+    \begin{algorithmic}[1]
+        #5
+    \end{algorithmic}
+\end{algorithm}
+}
