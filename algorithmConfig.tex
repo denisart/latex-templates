@@ -2,7 +2,7 @@
 % CONFIGURATION FILE FOR BUILD ALGORITHM DESCRIPTION
 %
 % AUTHOR:   Denis Artyushin, artyushinden@gmail.com
-% DATE:     04.04.2019
+% DATE:     09.04.2019
 % ====================================================
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
@@ -11,41 +11,103 @@
 % ====================================================
 % Color for general blocks
 % ====================================================
-% Default color
-% \definecolor{algblockcolor}{HTML}{000000}
-% Custom color
-\definecolor{algblockcolor}{HTML}{000080}
+% Block Color
+% \definecolor{algBlockColor}{HTML}{000000}
+\definecolor{algBlockColor}{HTML}{000080}
+% Standart color
+\definecolor{algStdColor}{HTML}{000000}
 
 % ====================================================
 % Re-command for general blocks
 % ====================================================
 % Russia
 \floatname{algorithm}{Алгоритм}
-\algrenewcommand\algorithmicrequire{\color{algblockcolor}{\textbf{Вход:}}}
-\algrenewcommand\algorithmicensure{\color{algblockcolor}{\textbf{Выход:}}}
-\algrenewcommand\algorithmicif{\color{algblockcolor}{\textbf{если}}}
-\algrenewcommand\algorithmicthen{\color{algblockcolor}{\textbf{то}}}
-\algrenewcommand\algorithmicelse{\color{algblockcolor}{\textbf{иначе}}}
-\algrenewcommand\algorithmicelsif{\color{algblockcolor}{\textbf{иначе если}}}
-\algrenewcommand\algorithmicfor{\color{algblockcolor}{\textbf{для}}}
-\algrenewcommand\algorithmicforall{\color{algblockcolor}{\textbf{для всех}}}
+\algrenewcommand\algorithmicrequire{
+    \color{algBlockColor}{\textbf{Вход:}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicensure{
+    \color{algBlockColor}{\textbf{Выход:}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicif{
+    \color{algBlockColor}{\textbf{Если}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicthen{
+    \color{algBlockColor}{\textbf{то}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicelse{
+    \color{algBlockColor}{\textbf{Иначе}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicfor{
+    \color{algBlockColor}{\textbf{Для}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicforall{
+    \color{algBlockColor}{\textbf{Для всех}}
+    \color{algStdColor}{}
+}
 \algrenewcommand\algorithmicdo{}
-\algrenewcommand\algorithmicrepeat{\color{algblockcolor}{\textbf{повторять}}}
-\algrenewcommand\algorithmicuntil{\color{algblockcolor}{\textbf{пока}}}
-\algrenewcommand\algorithmicloop{\color{algblockcolor}{\textbf{цикл}}}
+\algrenewcommand\algorithmicrepeat{
+    \color{algBlockColor}{\textbf{Повторять}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicwhile{
+    \color{algBlockColor}{\textbf{Пока}}
+    \color{algStdColor}{}
+}
+\algrenewcommand\algorithmicloop{
+    \color{algBlockColor}{\textbf{Цикл}}
+    \color{algStdColor}{}
+}
+\algloopdefx{Return}[1]{\color{algBlockColor}{\textbf{Вернуть}}\color{algStdColor}{ #1}}
 % English
-% \algrenewcommand\algorithmicrequire{\textbf{Input:}}
-% \algrenewcommand\algorithmicensure{\textbf{Output:}}
-% \algrenewcommand\algorithmicif{\color{algblockcolor}{\textbf{If}}}
-% \algrenewcommand\algorithmicthen{\color{algblockcolor}{\textbf{then}}}
-% \algrenewcommand\algorithmicelse{\color{algblockcolor}{\textbf{else}}}
-% \algrenewcommand\algorithmicelsif{\color{algblockcolor}{\textbf{if else}}}
-% \algrenewcommand\algorithmicfor{\color{algblockcolor}{\textbf{for}}}
-% \algrenewcommand\algorithmicforall{\color{algblockcolor}{\textbf{for all}}}
+% \floatname{algorithm}{Algorithm}
+% \algrenewcommand\algorithmicrequire{
+%     \color{algBlockColor}{\textbf{Input:}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicensure{
+%     \color{algBlockColor}{\textbf{Output:}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicif{
+%     \color{algBlockColor}{\textbf{If}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicthen{
+%     \color{algBlockColor}{\textbf{then}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicelse{
+%     \color{algBlockColor}{\textbf{Else}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicfor{
+%     \color{algBlockColor}{\textbf{For}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicforall{
+%     \color{algBlockColor}{\textbf{For all}}
+%     \color{algStdColor}{}
+% }
 % \algrenewcommand\algorithmicdo{}
-% \algrenewcommand\algorithmicrepeat{\color{algblockcolor}{\textbf{repeat}}}
-% \algrenewcommand\algorithmicuntil{\color{algblockcolor}{\textbf{while}}}
-% \algrenewcommand\algorithmicloop{\color{algblockcolor}{\textbf{loop}}}
+% \algrenewcommand\algorithmicrepeat{
+%     \color{algBlockColor}{\textbf{Repeat}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicwhile{
+%     \color{algBlockColor}{\textbf{While}}
+%     \color{algStdColor}{}
+% }
+% \algrenewcommand\algorithmicloop{
+%     \color{algBlockColor}{\textbf{Loop}}
+%     \color{algStdColor}{}
+% }
+% \algloopdefx{Return}[1]{\color{algBlockColor}{\textbf{Return}}\color{algStdColor}{ #1}}
 
 % ====================================================
 % Custom macros to describe of algorithms
@@ -62,6 +124,10 @@
 % \Algioitem : The input or output block.
 \newcommand{\Algioitem}[1]{\State \hspace{2.5pt} #1}
 
+\newcommand{\Alglongbox}[1]{
+    \parbox[t]{\dimexpr\linewidth-\algorithmicindent-\algorithmicindent-\algorithmicindent}{#1}
+}
+
 % Macro to describe the algorithm
 %
 % Parameters
@@ -75,7 +141,15 @@
 % Returns
 % -------
 % \Alg : The algorithm structure with input and output.
-\newcommand{\Alg}[5]{
+\newcommand{\Alg}[3]{
+\begin{algorithm}
+    \caption{#1}\label{#2}
+    \begin{algorithmic}[1]
+        #3
+    \end{algorithmic}
+\end{algorithm}
+}
+\newcommand{\AlgIO}[5]{
 \begin{algorithm}
     \caption{#1}\label{#2}
     \begin{algorithmic}
@@ -87,6 +161,32 @@
     \noindent\rule{\textwidth}{0.6pt}
     \begin{algorithmic}[1]
         #5
+    \end{algorithmic}
+\end{algorithm}
+}
+\newcommand{\AlgI}[4]{
+\begin{algorithm}
+    \caption{#1}\label{#2}
+    \begin{algorithmic}
+        \Require
+            #3
+    \end{algorithmic}
+    \noindent\rule{\textwidth}{0.6pt}
+    \begin{algorithmic}[1]
+        #4
+    \end{algorithmic}
+\end{algorithm}
+}
+\newcommand{\AlgO}[4]{
+\begin{algorithm}
+    \caption{#1}\label{#2}
+    \begin{algorithmic}
+        \Ensure
+            #3
+    \end{algorithmic}
+    \noindent\rule{\textwidth}{0.6pt}
+    \begin{algorithmic}[1]
+        #4
     \end{algorithmic}
 \end{algorithm}
 }
